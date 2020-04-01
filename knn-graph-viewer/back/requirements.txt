@@ -7,3 +7,5 @@ torchbiggraph
 numpy
 h5py
 fire
+pandas
+pyarrow
