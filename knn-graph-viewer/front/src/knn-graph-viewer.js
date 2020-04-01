@@ -3,6 +3,7 @@
 import { LitElement, html, unsafeCSS, css } from 'lit-element'
 import '@vaadin/vaadin-combo-box'
 import KnnService from './knn-service'
+import 'wct-datatables-net'
 import bootstrapCss from 'bootstrap/dist/css/bootstrap.min.css'
 
 class KnnGraphViewer extends LitElement {
@@ -66,9 +67,10 @@ class KnnGraphViewer extends LitElement {
         const dataSet = r.map(({ dist, name }) => {
             return [
               name,
-              dist
+              dist.toString()
             ]
         })
+        console.log(dataSet)
         this.tableOptions = {
           ordering: false,
           destroy: true,

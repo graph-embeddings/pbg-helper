@@ -8,14 +8,16 @@ export default class KnnService {
   knnSearch (entity, relation, k, direction) {
     return fetch(this.backend + '/knn', {
     method: 'POST',
-    body: JsonBigint.stringify({
-        entity,
-        relation,
-        k,
-        direction
+    body: JsonBigint
+      .stringify({
+          entity,
+          relation,
+          k,
+          direction
+        })
       })
-    })
-    .then(response => response.text())
+      .then(response => response.text())
+      .then(response => JsonBigint.parse(response))
   }
 
   entitySearch (query, limit, offset) {
@@ -28,6 +30,7 @@ export default class KnnService {
     })
     })
     .then(response => response.text())
+    .then(response => JsonBigint.parse(response))
   }
 
   relationSearch (query, limit, offset) {
@@ -40,5 +43,6 @@ export default class KnnService {
     })
     })
     .then(response => response.text())
+    .then(response => JsonBigint.parse(response))
   }
 }
