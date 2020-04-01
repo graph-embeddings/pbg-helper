@@ -1,0 +1,9 @@
+flask
+flask-ext
+flask-jsonpify
+flask-restful
+flask-cors
+torchbiggraph
+numpy
+h5py
+fire
