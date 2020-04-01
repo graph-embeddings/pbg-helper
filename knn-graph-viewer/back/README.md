@@ -26,13 +26,11 @@ Follow generate_names README. You will need it to create files `entity_name_file
 ### How to launch?
 
 ```
-ROOT="/var/opt/data/user_data/r.beaumont/pbg"
-
-python api.py --ent_paths='["$ROOT/embeddings_all_0.v30.h5", \
-"$ROOT/embeddings_all_1.v30.h5", \
-"$ROOT/embeddings_all_2.v30.h5", \
-"$ROOT/embeddings_all_3.v30.h5"]' \
---rel_path="$ROOT/model.v30.h5" \
+python api.py --ent_paths='["embeddings_all_0.v30.h5", \
+"embeddings_all_1.v30.h5", \
+"embeddings_all_2.v30.h5", \
+"embeddings_all_3.v30.h5"]' \
+--rel_path="model.v30.h5" \
 --entity_name_file="viewfs://prod-am6/user/r.beaumont/freebase_names" \
 --relation_name_file="viewfs://prod-am6/user/r.beaumont/freebase_relation_names" \
 --port=5007
