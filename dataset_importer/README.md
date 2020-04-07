@@ -2,7 +2,16 @@
 
 ## Installation
 
-You need scala and spark. And pip install XXX
+You need scala and spark and python
+
+For python, 
+```
+conda create -n pbg --y python=3.6
+conda activate pbg
+pip install -r requirements.txt
+```
+
+And pip install 
 
 ## Documentation
 First we need to create parquet files with partitioned entities, relations, and triplets.
